@@ -1,6 +1,6 @@
 version: '3'
 services:
-  节点奖励逻辑更新了，现在一个 ip 下只开 1 个节点有 1.1 倍
+  #节点奖励逻辑更新了，现在一个 ip 下只开 1 个节点有 1.1 倍
   titan1:
     image: nezha123/titan-edge
     container_name: titan1
