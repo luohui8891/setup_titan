@@ -1,6 +1,6 @@
 version: '3'
 services:
-  # 节点奖励逻辑更新了，现在一个 ip 下只开 1 个节点有 1.1 倍
+  节点奖励逻辑更新了，现在一个 ip 下只开 1 个节点有 1.1 倍
   titan1:
     image: nezha123/titan-edge
     container_name: titan1
@@ -9,35 +9,35 @@ services:
      - QUIC_GO_DISABLE_ECN=true
     volumes:
     - ~/titan/titanedge1:/root/.titanedge
-  # titan2:
-  #   image: nezha123/titan-edge
-  #   container_name: titan2
-  #   restart: unless-stopped
-  #   environment:
-  #    - QUIC_GO_DISABLE_ECN=true
-  #   volumes:
-  #   - ~/titan/titanedge2:/root/.titanedge
-  # titan3:
-  #   image: nezha123/titan-edge
-  #   container_name: titan3
-  #   restart: unless-stopped
-  #   environment:
-  #    - QUIC_GO_DISABLE_ECN=true
-  #   volumes:
-  #   - ~/titan/titanedge3:/root/.titanedge
-  # titan4:
-  #   image: nezha123/titan-edge
-  #   container_name: titan4
-  #   restart: unless-stopped
-  #   environment:
-  #    - QUIC_GO_DISABLE_ECN=true
-  #   volumes:
-  #   - ~/titan/titanedge4:/root/.titanedge
-  # titan5:
-  #   image: nezha123/titan-edge
-  #   container_name: titan5
-  #   restart: unless-stopped
-  #   environment:
-  #    - QUIC_GO_DISABLE_ECN=true
-  #   volumes:
-  #   - ~/titan/titanedge5:/root/.titanedge
+  titan2:
+    image: nezha123/titan-edge
+    container_name: titan2
+    restart: unless-stopped
+    environment:
+     - QUIC_GO_DISABLE_ECN=true
+    volumes:
+    - ~/titan/titanedge2:/root/.titanedge
+  titan3:
+    image: nezha123/titan-edge
+    container_name: titan3
+    restart: unless-stopped
+    environment:
+     - QUIC_GO_DISABLE_ECN=true
+    volumes:
+    - ~/titan/titanedge3:/root/.titanedge
+  titan4:
+    image: nezha123/titan-edge
+    container_name: titan4
+    restart: unless-stopped
+    environment:
+     - QUIC_GO_DISABLE_ECN=true
+    volumes:
+    - ~/titan/titanedge4:/root/.titanedge
+  titan5:
+    image: nezha123/titan-edge
+    container_name: titan5
+    restart: unless-stopped
+    environment:
+     - QUIC_GO_DISABLE_ECN=true
+    volumes:
+    - ~/titan/titanedge5:/root/.titanedge

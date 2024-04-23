@@ -65,8 +65,9 @@ storage_command="titan-edge config set --storage-size "$storage_gb"GB"
 # 绑定 hash
 bind_command="titan-edge bind --hash="$user_hash" https://api-test1.container1.titannet.io/api/v2/device/binding"
 
-# 现在只有一个节点了
-docker exec -it titan1 bash -c "$storage_command"
-docker exec -it titan1 bash -c "$bind_command"
+for i in {1..5}; do
+    docker exec -it titan$i bash -c "$storage_command"
+    docker exec -it titan$i bash -c "$bind_command"
+done
 
 docker compose restart
